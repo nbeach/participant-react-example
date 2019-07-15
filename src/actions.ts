@@ -1,5 +1,5 @@
 import {createActionFactory} from "participant";
-import {AppState} from "./store";
+import {AppState} from "./participant/state/store";
 
 export interface StateChangedAction {
     state: AppState

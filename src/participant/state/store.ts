@@ -1,6 +1,6 @@
 import {Action, isAction} from "participant/src/action";
 import {ActionHandler} from "participant/src/participant";
-import {changeMessage, stateChanged} from "./actions";
+import {changeMessage, stateChanged} from "../../actions";
 
 export type Reducer<S, E> = (state: S, event: E) => S
 

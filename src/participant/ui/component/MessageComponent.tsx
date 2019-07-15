@@ -2,8 +2,8 @@ import React from "react";
 import {Dispatch} from "participant"
 import {ActionHandler} from "participant/src/participant";
 import {isAction} from "participant/src/action";
-import {AppState} from "./store";
-import {buttonClicked, stateChanged} from "./actions";
+import {AppState} from "../../state/store";
+import {buttonClicked, stateChanged} from "../../../actions";
 
 interface MessageComponentProps {
     dispatch: Dispatch
