@@ -15,11 +15,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve"
   },
   "include": [
     "src"
-  ]
+  ],
+  "sourceMap": true
 }

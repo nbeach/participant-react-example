@@ -2,12 +2,11 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {createParticipantGroup} from "participant/src/participant";
 import {webWorkerParticipant} from "participant/src/worker";
-import {stateParticipant} from "./participant/state/stateParticipant";
 import {uiParticipant} from "./participant/ui/uiParticipant";
 
 createParticipantGroup([
-    stateParticipant,
     uiParticipant,
+    webWorkerParticipant('stateParticipant.js'),
     webWorkerParticipant('clickHandlerParticipant.js'),
 ])
 
