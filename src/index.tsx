@@ -4,12 +4,14 @@ import {createParticipantGroup} from "participant/src/participant";
 import {webWorkerParticipant} from "participant/src/worker";
 import {uiParticipant} from "./participant/ui/uiParticipant";
 
+const stateParticipant  = webWorkerParticipant(new Worker("./participant/state/stateParticipant.worker.ts"))
+const clickHandlerParticipant = webWorkerParticipant(new Worker("./participant/clickHandlerParticipant.worker.ts"))
+
 createParticipantGroup([
     uiParticipant,
-    webWorkerParticipant('stateParticipant.js'),
-    webWorkerParticipant('clickHandlerParticipant.js'),
+    clickHandlerParticipant,
+    stateParticipant,
 ])
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
